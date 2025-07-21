@@ -6,7 +6,7 @@ from snowflake.snowpark.functions import col
 # {st.__version__}
 st.title(f":cup_with_straw: Customize Your Smoothie:cup_with_straw:")
 st.write(
-  """Choose the fruits you want in your custom Smoothie 2!
+  """Choose the fruits you want in your custom Smoothie!
   """
 )
 
@@ -63,5 +63,5 @@ if ingredients_list:
 
     import requests
     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-    st.text(smoothiefroot_response)
+    st.text(smoothiefroot_response.json())
     
